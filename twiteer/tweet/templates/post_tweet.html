@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+    {% block title %}
+    Post a Tweet
+    {% endblock title %}
+
+    content:
+    {% block content %}
+    <h1>Post a Tweet</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="content" class="form-label">Tweet Content</label>
+            <textarea class="form-control" id="content" name="content" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Post Tweet</button>
+    </form>
+    {% endblock content %}
